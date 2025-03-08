@@ -15,6 +15,7 @@ import {
   CardTitle,
   CardFooter,
 } from "../../components/ui/card";
+import styles from "../../styles/Register.module.css";
 
 export default function RegisterPage() {
   const [formData, setFormData] = useState({
@@ -37,18 +38,10 @@ export default function RegisterPage() {
   };
 
   return (
-    <div
-      className="flex min-h-screen items-center justify-center p-4"
-      style={{
-        backgroundImage:
-          "url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1920&auto=format&fit=crop')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <div className="absolute inset-0 bg-black/50" />
+    <div className={`flex min-h-screen items-center justify-center p-4 ${styles.registerBackground}`}>
+      <div className={styles.overlay} />
 
-      <Card className="w-full max-w-md z-10 bg-black/65">
+      <Card className={styles.card}>
         <CardHeader className="space-y-1">
           <CardTitle className="text-2xl font-bold ">
             Create an account
